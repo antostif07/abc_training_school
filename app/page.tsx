@@ -1,4 +1,5 @@
-import { BookOpen, Users, Trophy, CheckCircle, ArrowRight, GraduationCap, Layout, Code, Palette } from 'lucide-react';
+import { Users, Trophy, ArrowRight, GraduationCap, Layout, Code, Palette } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -8,7 +9,7 @@ export default function Home() {
         <nav className="container mx-auto px-24 py-8">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-            <img
+            <Image
                 src="/logo.png" 
                 alt="Students learning"
                 className="rounded-lg shadow-xl w-28"
@@ -22,7 +23,7 @@ export default function Home() {
             </div> */}
             <div className="space-x-4">
               <button className="px-4 py-2 text-white hover:text-blue-200">Se connecter</button>
-              <button className="px-4 py-2 bg-white text-blue-600 rounded-lg hover:bg-blue-50">S'Inscrire</button>
+              <button className="px-4 py-2 bg-white text-blue-600 rounded-lg hover:bg-blue-50">S&apos;Inscrire</button>
             </div>
           </div>
         </nav>
@@ -68,7 +69,7 @@ export default function Home() {
                 <GraduationCap className="h-8 w-8 text-blue-600" />
               </div>
               <h3 className="mt-4 text-xl font-semibold">Des Professeurs experts</h3>
-              <p className="mt-2 text-gray-600">Apprenez auprès de professionnels du secteur ayant des années d'expérience.</p>
+              <p className="mt-2 text-gray-600">Apprenez auprès de professionnels du secteur ayant des années d&apos;expérience.</p>
             </div>
             <div className="flex flex-col items-center text-center">
               <div className="bg-blue-100 p-4 rounded-full">
@@ -113,7 +114,7 @@ export default function Home() {
               }
             ].map((course, index) => (
               <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img 
+                <Image 
                   src={course.image}
                   alt={course.title}
                   className="w-full h-48 object-cover"
@@ -146,10 +147,10 @@ export default function Home() {
       <section className="bg-blue-600 py-20">
         <div className="container mx-auto px-24 text-center">
           <h2 className="text-3xl font-bold text-white mb-8">
-          Prêt à commencer votre parcours d'apprentissage ?
+          Prêt à commencer votre parcours d&apos;apprentissage ?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-          Rejoignez des dizaines d'apprenants déjà inscrits sur ABC Training Flow.
+          Rejoignez des dizaines d&apos;apprenants déjà inscrits sur ABC Training Flow.
           </p>
           <button className="px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition">
           Commencez dès maintenant
@@ -184,8 +185,8 @@ export default function Home() {
             <div>
               <h4 className="text-lg font-semibold mb-4">Support</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white">Centre d'aide</a></li>
-                <li><a href="#" className="hover:text-white">Conditions d'utilisation</a></li>
+                <li><a href="#" className="hover:text-white">Centre d&apos;aide</a></li>
+                <li><a href="#" className="hover:text-white">Conditions d&apos;utilisation</a></li>
                 <li><a href="#" className="hover:text-white">Politique de confidentialité</a></li>
                 <li><a href="#" className="hover:text-white">FAQ</a></li>
               </ul>
