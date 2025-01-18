@@ -1,32 +1,13 @@
 import { Users, Trophy, ArrowRight, GraduationCap, Layout, Code, Palette } from 'lucide-react';
-import Image from 'next/image';
+import AppMenu from './components/app-menu';
+import Footer from './components/footer';
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <header className="bg-gradient-to-r from-blue-600 to-indigo-700">
-        <nav className="container mx-auto px-24 py-8">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
-            <Image
-                src="/logo.png" 
-                alt="Students learning"
-                className="rounded-lg shadow-xl w-28"
-              />
-            </div>
-            {/* <div className="hidden md:flex space-x-8 text-white">
-              <a href="#" className="hover:text-blue-200">Courses</a>
-              <a href="#" className="hover:text-blue-200">About</a>
-              <a href="#" className="hover:text-blue-200">Pricing</a>
-              <a href="#" className="hover:text-blue-200">Contact</a>
-            </div> */}
-            <div className="space-x-4">
-              <button className="px-4 py-2 text-white hover:text-blue-200">Se connecter</button>
-              <button className="px-4 py-2 bg-white text-blue-600 rounded-lg hover:bg-blue-50">S&apos;Inscrire</button>
-            </div>
-          </div>
-        </nav>
+        <AppMenu />
         
         <div className="container mx-auto px-24 py-10">
           <div className="flex flex-col md:flex-row items-center gap-1">
@@ -114,10 +95,10 @@ export default function Home() {
               }
             ].map((course, index) => (
               <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
-                <Image 
+                <img 
                   src={course.image}
                   alt={course.title}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-48 object-cover" width={200} height={200}
                 />
                 <div className="p-6">
                   <div className="flex items-center space-x-2">
@@ -150,7 +131,7 @@ export default function Home() {
           Prêt à commencer votre parcours d&apos;apprentissage ?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-          Rejoignez des dizaines d&apos;apprenants déjà inscrits sur ABC Training Flow.
+          Rejoignez des dizaines d&apos;apprenants déjà inscrits sur ABC Training School.
           </p>
           <button className="px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition">
           Commencez dès maintenant
@@ -158,53 +139,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="container mx-auto px-24">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center space-x-2">
-                <img
-                  src="/logo.png" 
-                  alt="Students learning"
-                  className="rounded-lg shadow-xl w-28"
-                />
-              </div>
-              <p className="mt-4 text-gray-400">
-              Soutenir les apprenants grâce à une éducation de qualité.
-              </p>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Liens rapides</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white">À propos de nous</a></li>
-                <li><a href="#" className="hover:text-white">Cours</a></li>
-                <li><a href="#" className="hover:text-white">Contact</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Support</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white">Centre d&apos;aide</a></li>
-                <li><a href="#" className="hover:text-white">Conditions d&apos;utilisation</a></li>
-                <li><a href="#" className="hover:text-white">Politique de confidentialité</a></li>
-                <li><a href="#" className="hover:text-white">FAQ</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Contactez-nous</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>contact@abctrainingschool.com</li>
-                <li>+243 089 99 99 999</li>
-                <li>Adresse du bureau</li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-            <p>&copy; 2025 ABC Training School. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
