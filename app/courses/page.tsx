@@ -1,4 +1,4 @@
-import { BookOpen, Search, Filter, Star, Clock, Users, ArrowRight } from 'lucide-react';
+import { Search, Filter, Star, Clock, Users, ArrowRight } from 'lucide-react';
 import AppMenu from '../components/app-menu';
 import Footer from '../components/footer';
 
@@ -120,11 +120,15 @@ export default function Courses() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {courses.map((course, index) => (
               <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                <img
-                  src={course.image}
-                  alt={course.title}
-                  className="w-full h-48 object-cover"
-                />
+                <picture>
+                  <source srcSet={`${course.image}?fm=webp`} type="image/webp" />
+                  <source srcSet={`${course.image}?fm=jpg`} type="image/jpeg" />
+                  <img
+                    src={course.image}
+                    alt={course.title}
+                    className="w-full h-48 object-cover"
+                  />
+                </picture>
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-sm font-medium text-blue-600">{course.category}</span>

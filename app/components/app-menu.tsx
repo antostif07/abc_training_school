@@ -5,11 +5,14 @@ export default function AppMenu() {
         <nav className="container mx-auto px-24 py-8 bg-gradient-to-r from-blue-600 to-indigo-700">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-            <img
-                src="/logo.png" 
-                alt="Students learning"
-                className="rounded-lg shadow-xl w-28" width={200} height={200}
-              />
+              <picture>
+                <source srcSet="/logo.png" type="image/jpeg" />
+                <img
+                  src="/logo.png" 
+                  alt="Students learning"
+                  className="rounded-lg shadow-xl w-28" width={200} height={200}
+                />
+              </picture>
             </div>
             <div className="hidden md:flex space-x-8 text-white">
                 <Link href="/" className="hover:text-blue-200">Accueil</Link>

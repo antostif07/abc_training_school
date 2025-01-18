@@ -28,11 +28,14 @@ export default function Home() {
               </div>
             </div>
             <div className="md:w-1/2 mt-10 md:mt-0">
-              <img 
-                src="/bg_home.jpg" 
-                alt="Students learning"
-                className="rounded-lg shadow-xl"
-              />
+              <picture>
+                <source srcSet="/bg_home.jpg" type="image/jpeg" />
+                <img
+                  src="/bg_home.jpg"
+                  alt="Students learning"
+                  className="rounded-lg shadow-xl"
+                />
+              </picture>
             </div>
           </div>
         </div>
@@ -95,11 +98,15 @@ export default function Home() {
               }
             ].map((course, index) => (
               <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img 
-                  src={course.image}
-                  alt={course.title}
-                  className="w-full h-48 object-cover" width={200} height={200}
-                />
+                <picture>
+                  <source srcSet={`${course.image}?fm=webp`} type="image/webp" />
+                  <source srcSet={`${course.image}?fm=jpg`} type="image/jpeg" />
+                  <img 
+                    src={course.image}
+                    alt={course.title}
+                    className="w-full h-48 object-cover" width={800} height={600}
+                  />
+                </picture>
                 <div className="p-6">
                   <div className="flex items-center space-x-2">
                     <div className="p-2 bg-blue-100 rounded-lg">

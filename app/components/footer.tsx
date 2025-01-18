@@ -1,3 +1,4 @@
+
 export default function Footer() {
     return (
         <footer className="bg-gray-900 text-white py-12">
@@ -5,12 +6,14 @@ export default function Footer() {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-2">
-                <img
-                  width={200} height={200}
-                  src="/logo.png" 
-                  alt="Students learning"
-                  className="rounded-lg shadow-xl w-28"
-                />
+                <picture>
+                  <source srcSet="/logo.png" type="image/jpeg" />
+                  <img
+                    src="/logo.png" 
+                    alt="Students learning"
+                    className="rounded-lg shadow-xl w-28"
+                  />
+                </picture>
               </div>
               <p className="mt-4 text-gray-400">
               Soutenir les apprenants grâce à une éducation de qualité.

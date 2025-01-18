@@ -1,4 +1,4 @@
-import { BookOpen, Mail, Phone, MapPin, Clock } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 import AppMenu from '../components/app-menu';
 import Footer from '../components/footer';
 

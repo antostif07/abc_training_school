@@ -1,4 +1,4 @@
-import { BookOpen, Award, Users, Globe, Target, Sparkles } from 'lucide-react';
+import { Globe, Target, Sparkles } from 'lucide-react';
 import AppMenu from '../components/app-menu';
 import Footer from '../components/footer';
 
@@ -25,7 +25,7 @@ export default function About() {
             <div>
               <h2 className="text-3xl font-bold text-gray-800 mb-6">Notre Mission</h2>
               <p className="text-gray-600 mb-8">
-              Chez ABC Training School, nous croyons que l'éducation doit être accessible à tous, partout dans le monde. Notre mission est de briser les barrières à l'apprentissage et de créer des opportunités de développement personnel et professionnel grâce à une éducation en ligne innovante.
+              Chez ABC Training School, nous croyons que l&apos;éducation doit être accessible à tous, partout dans le monde. Notre mission est de briser les barrières à l&apos;apprentissage et de créer des opportunités de développement personnel et professionnel grâce à une éducation en ligne innovante.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
@@ -43,11 +43,14 @@ export default function About() {
               </div>
             </div>
             <div>
-              <img
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                alt="Students collaborating"
-                className="rounded-lg shadow-xl"
-              />
+              <picture>
+                <source srcSet="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" type="image/jpeg" />
+                <img
+                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                  alt="Students collaborating"
+                  className="rounded-lg shadow-xl"
+                />
+              </picture>
             </div>
           </div>
         </div>
@@ -95,11 +98,15 @@ export default function About() {
               }
             ].map((member, index) => (
               <div key={index} className="text-center">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-48 h-48 rounded-full mx-auto mb-6 object-cover"
-                />
+                <picture>
+                  <source srcSet={`${member.image}?fm=webp`} type="image/webp" />
+                  <source srcSet={`${member.image}?fm=jpg`} type="image/jpeg" />
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-48 h-48 rounded-full mx-auto mb-6 object-cover"
+                  />
+                </picture>
                 <h3 className="text-xl font-semibold text-gray-800">{member.name}</h3>
                 <p className="text-gray-600">{member.role}</p>
               </div>
