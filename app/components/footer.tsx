@@ -41,7 +41,7 @@ export default function Footer() {
               <ul className="space-y-2 text-gray-400">
                 <li>contact@abctrainingschool.com</li>
                 <li>+243 089 99 99 999</li>
-                <li>Adresse du bureau</li>
+                <li>Adresse du bureau ABC</li>
               </ul>
             </div>
           </div>
