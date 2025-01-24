@@ -27,13 +27,13 @@ export default function Home() {
                 </button>
               </div>
             </div>
-            <div className="md:w-1/2 mt-10 md:mt-0">
+            <div className="md:w-1/2 mt-10 md:mt-0 h-96 overflow-hidden">
               <picture>
                 <source srcSet="/bg_home.jpg" type="image/jpeg" />
                 <img
                   src="/bg_home.jpg"
                   alt="Students learning"
-                  className="rounded-lg shadow-xl"
+                  className="rounded-lg shadow-xl object-cover h-full w-full"
                 />
               </picture>
             </div>
